@@ -1,0 +1,98 @@
+<html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+<style>
+    .header{
+        width: 100vw;
+        text-align: center;
+        font-size: 208px;
+        height: 100vh;
+        margin: 3rem 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-family: 'Itim', cursive;
+    }
+
+    .fade{
+        position: relative;
+         transform: translateY(150px);
+        opacity: 0;
+         transition: 5s all ease;
+        font-size: 48px;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 3rem;
+        display: flex;
+        padding: 2rem;
+        border-radius: 5rem;
+        text-align: center;
+        font-family: 'Itim', cursive;
+    }
+
+    .fade.active{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+
+    #body{
+        display: flex;
+        flex-direction: column;
+        background-color: azure;
+    }
+</style>
+
+<body>
+<script>
+    const reveal = () => {
+  var reveals = document.querySelectorAll(".fade");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+</script>
+    <div class="header">
+        <p>6.234%</p>
+    </div>
+
+        <div class="fade">You might be wondering what the number on the card means, right?</div>
+
+        <div class="fade">It's the percentage of your life that we've spent together!</div>
+
+        <div class="fade">It's funny isn't it? When we live in the present, we quickly forget the grand scheme of things.</div>
+      
+        <div class="fade">It's only when we zoom out and look at the grand scheme of our lives that we really appreciate the moment. That's when we're able to really think about the time that we have, and how we've spent it.</div>
+
+        <div class="fade">It's crazy when we put things into objective numbers, it gives us a new perspective.</div>
+       
+        <div class="fade">I hope that in reading this, I can convey all my appreciation about that special 6.234%, and that you'll think back on all the bright and shiny moments together.</div>
+
+        <div class="fade">You're gonna have a great year, and the future isn't prepared for you when you graduate!</div>
+     
+        <div class="fade">Don't worry too much about life, because i'm here for you to rely on.</div>
+
+        <div class="fade">That's why I made this card and website to immortalize this feeling, so you can always scan the QR code on this card and remember that feeling (it's made to last)</div>
+      
+        <div class="fade">Much love, much appreciation, and much hope for the future,</div>
+       
+        <div class="fade">Humphrey</div>
+
+        <div class="fade">P.S. love youuuuu, hug hut, you'll always be my #1, even when I win in games 😋</div>
+        
+   
+</body>
+</html>
